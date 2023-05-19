@@ -39,12 +39,6 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        mountains = new ArrayList<>(Arrays.asList(
-            new RecyclerViewItem("Matterhorn"),
-            new RecyclerViewItem("Mont Blanc"),
-            new RecyclerViewItem("Denali")
-        ));
-
 
 
         adapter = new RecyclerViewAdapter(this, mountains, new RecyclerViewAdapter.OnClickListener() {
@@ -88,7 +82,8 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
 
         for(mountain mountain : listOfMountains){
 
-            mountains.add(new RecyclerViewItem(mountain.getName()));
+           mountains.add(new RecyclerViewItem(mountain.getName()));
+            mountains.add(new RecyclerViewItem(mountain.getID()));
 
         }
 
