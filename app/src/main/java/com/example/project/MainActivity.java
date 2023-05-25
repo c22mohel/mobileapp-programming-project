@@ -82,8 +82,7 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
 
         for(mountain mountain : listOfMountains){
 
-           mountains.add(new RecyclerViewItem(mountain.getName()));
-            mountains.add(new RecyclerViewItem(mountain.getID()));
+            mountains.add(new RecyclerViewItem(mountain.getTitle(), mountain.getlocation(), mountain.getPrice(), mountain.getname()));
 
         }
 
